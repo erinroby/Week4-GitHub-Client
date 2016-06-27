@@ -9,11 +9,7 @@
 	* Given an array of ints of odd length, return a new array length 3 containing the elements from the middle of the array. The array length will be at least 3.
 * **Bonus:**
 	* Create a github service and implement a method that fetches repositories based on a search term.
-<<<<<<< HEAD
 	* Implement saving to Keychain instead of UserDefaults.
-=======
-	* Save to keychain instead of UserDefaults.
->>>>>>> e95a95f0fb2d49d072a651cb13f565d70aab982b
 
 ###Readings:
 * Apple Documentation
