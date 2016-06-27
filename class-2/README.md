@@ -10,6 +10,10 @@
 	* Write a function that takes in an array of numbers, and returns the lowest and highest numbers as a tuple.
 * **Bonus**
 	* Implement Pull-to-refresh on your Repository TableView.
+<<<<<<< HEAD
+=======
+	
+>>>>>>> a4f195a77c7eb224875d7fd0b881f0a401b97cf7
 ##Reading Assignment:
 * Apple Documentation:
 	* [UIViewController Programming Guide](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1)
