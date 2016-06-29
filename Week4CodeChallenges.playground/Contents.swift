@@ -25,6 +25,7 @@ func tupleHighLow(input: [Int]) -> (min: Int?, max: Int?) {
 
 tupleHighLow(test)
 
+<<<<<<< HEAD
 // CLASS 3: Given a non-negative number "num", return true if num is within 2 of a multiple of 10. Note: (a % b) is the remainder of dividing a by b, so (7 % 5) is 2.
 
 func multiple(num: Int) -> Bool {
@@ -35,5 +36,7 @@ func multiple(num: Int) -> Bool {
 
 // multiple(54)
 
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 
 

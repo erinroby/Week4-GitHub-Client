@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TgS-0W-GAI">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eqZ-Fz-iPo">
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -67,11 +71,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ujI-WJ-1gR">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repositoryCell" textLabel="oaK-bR-mES" style="IBUITableViewCellStyleDefault" id="HX0-3u-rWa">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+=======
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repositoryCell" textLabel="oaK-bR-mES" style="IBUITableViewCellStyleDefault" id="HX0-3u-rWa">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HX0-3u-rWa" id="ubK-8h-Eg7">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -97,6 +109,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ujI-WJ-1gR" firstAttribute="leading" secondItem="500-Xg-QWv" secondAttribute="leading" id="GLy-Fh-eY1"/>
+<<<<<<< HEAD
                             <constraint firstItem="ujI-WJ-1gR" firstAttribute="top" secondItem="500-Xg-QWv" secondAttribute="top" id="IRH-db-4Vg"/>
                             <constraint firstAttribute="trailing" secondItem="ujI-WJ-1gR" secondAttribute="trailing" id="N8A-Fs-D9B"/>
                             <constraint firstItem="0ei-rJ-tIS" firstAttribute="top" secondItem="ujI-WJ-1gR" secondAttribute="bottom" id="oU8-9d-yIl"/>
@@ -114,12 +127,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+=======
+                            <constraint firstAttribute="trailing" secondItem="ujI-WJ-1gR" secondAttribute="trailing" id="N8A-Fs-D9B"/>
+                            <constraint firstItem="ujI-WJ-1gR" firstAttribute="top" secondItem="eNL-ZL-acF" secondAttribute="bottom" id="bC4-r4-d5p"/>
+                            <constraint firstItem="0ei-rJ-tIS" firstAttribute="top" secondItem="ujI-WJ-1gR" secondAttribute="bottom" id="oU8-9d-yIl"/>
+                        </constraints>
+                    </view>
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
                     <connections>
                         <outlet property="tableView" destination="ujI-WJ-1gR" id="DnE-9W-yxR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3E-dw-Cb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="2090" y="459"/>
         </scene>
         <!--Profile View Controller-->
@@ -198,6 +219,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nyv-ew-iTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1386" y="459"/>
+=======
+            <point key="canvasLocation" x="1278" y="459"/>
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
         </scene>
     </scenes>
 </document>

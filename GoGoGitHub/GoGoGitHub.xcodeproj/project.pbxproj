@@ -20,9 +20,12 @@
 		0D3741431D2307820092813E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3741421D2307820092813E /* Repository.swift */; };
 		0D3741451D23078D0092813E /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3741441D23078D0092813E /* Owner.swift */; };
 		0D3741471D2308470092813E /* Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3741461D2308470092813E /* Additions.swift */; };
+<<<<<<< HEAD
 		0D9769431D243F77001E2241 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9769421D243F77001E2241 /* ProfileViewController.swift */; };
 		0D9769451D2446B4001E2241 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9769441D2446B4001E2241 /* User.swift */; };
 		0D9769471D244A05001E2241 /* CustomModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9769461D244A05001E2241 /* CustomModalTransition.swift */; };
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +44,12 @@
 		0D3741421D2307820092813E /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		0D3741441D23078D0092813E /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		0D3741461D2308470092813E /* Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Additions.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		0D9769421D243F77001E2241 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0D9769441D2446B4001E2241 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0D9769461D244A05001E2241 /* CustomModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalTransition.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +116,10 @@
 				0D0B341E1D2199500023B1BD /* Main.storyboard */,
 				0D0B34211D2199500023B1BD /* Assets.xcassets */,
 				0D0B34231D2199500023B1BD /* LaunchScreen.storyboard */,
+<<<<<<< HEAD
 				0D9769461D244A05001E2241 /* CustomModalTransition.swift */,
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -121,7 +130,10 @@
 				0D37413C1D22F70A0092813E /* Setup.swift */,
 				0D3741421D2307820092813E /* Repository.swift */,
 				0D3741441D23078D0092813E /* Owner.swift */,
+<<<<<<< HEAD
 				0D9769441D2446B4001E2241 /* User.swift */,
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -131,7 +143,10 @@
 			children = (
 				0D0B341C1D2199500023B1BD /* OAuthViewController.swift */,
 				0D37413E1D22FA5C0092813E /* HomeViewController.swift */,
+<<<<<<< HEAD
 				0D9769421D243F77001E2241 /* ProfileViewController.swift */,
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -217,15 +232,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D0B342D1D219A610023B1BD /* GitHubOAuth.swift in Sources */,
+<<<<<<< HEAD
 				0D9769471D244A05001E2241 /* CustomModalTransition.swift in Sources */,
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 				0D3741471D2308470092813E /* Additions.swift in Sources */,
 				0D0B341D1D2199500023B1BD /* OAuthViewController.swift in Sources */,
 				0D0B342F1D219D530023B1BD /* Credentials.swift in Sources */,
 				0D3741431D2307820092813E /* Repository.swift in Sources */,
 				0D3741451D23078D0092813E /* Owner.swift in Sources */,
+<<<<<<< HEAD
 				0D9769431D243F77001E2241 /* ProfileViewController.swift in Sources */,
 				0D37413D1D22F70A0092813E /* Setup.swift in Sources */,
 				0D9769451D2446B4001E2241 /* User.swift in Sources */,
+=======
+				0D37413D1D22F70A0092813E /* Setup.swift in Sources */,
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 				0D0B341B1D2199500023B1BD /* AppDelegate.swift in Sources */,
 				0D37413F1D22FA5C0092813E /* HomeViewController.swift in Sources */,
 				0D3741411D23035D0092813E /* API.swift in Sources */,

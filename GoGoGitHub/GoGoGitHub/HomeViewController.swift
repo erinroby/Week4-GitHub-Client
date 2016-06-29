@@ -8,12 +8,19 @@
 
 import UIKit
 
+<<<<<<< HEAD
 class HomeViewController: UIViewController, Setup, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     lazy var transition = CustomModalTransition(duration: 2.0)
     
+=======
+class HomeViewController: UIViewController {
+
+    @IBOutlet weak var tableView: UITableView!
+    
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
     var repositories = [Repository]() {
         didSet {
             self.tableView.reloadData()
@@ -22,6 +29,10 @@ class HomeViewController: UIViewController, Setup, UIViewControllerTransitioning
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
+=======
+//        API.shared.GETRepositories()
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +47,7 @@ class HomeViewController: UIViewController, Setup, UIViewControllerTransitioning
             }
         }
     }
+<<<<<<< HEAD
     
     func setup() {
         self.navigationItem.title = "Repositories"
@@ -78,6 +90,11 @@ extension HomeViewController: UITableViewDataSource, ProfileViewControllerDelega
         }
     }
     
+=======
+}
+
+extension HomeViewController: UITableViewDataSource {
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.repositories.count
     }
@@ -88,6 +105,7 @@ extension HomeViewController: UITableViewDataSource, ProfileViewControllerDelega
         repositoryCell.textLabel?.text = respository.name
         return repositoryCell
     }
+<<<<<<< HEAD
     
     func profileViewControllerDidFinish() {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -96,4 +114,6 @@ extension HomeViewController: UITableViewDataSource, ProfileViewControllerDelega
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self.transition
     }
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 }

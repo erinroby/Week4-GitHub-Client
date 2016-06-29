@@ -2,6 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
+<<<<<<< HEAD
       location = "self:">
+=======
+      location = "self:GoGoGitHub.xcodeproj">
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
    </FileRef>
 </Workspace>

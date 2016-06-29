@@ -13,7 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var oAuthViewController: OAuthViewController?
+<<<<<<< HEAD
     var homeViewController: HomeViewController?
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -28,12 +31,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("We have a token!!!") // we have a token so let's remove the login view
                 if let oAuthViewController = self.oAuthViewController {
                     UIView.animateWithDuration(0.4, delay: 1.0, options: .CurveEaseOut, animations: {
+<<<<<<< HEAD
                         self.homeViewController?.navigationController?.navigationBarHidden = false
                         oAuthViewController.view.alpha = 0.0
                         }, completion: { (finished) in
                             oAuthViewController.view.removeFromSuperview()
                             oAuthViewController.removeFromParentViewController()
                             // self.homeViewController?.update()
+=======
+                        oAuthViewController.view.alpha = 0.0 }, completion: { (finished) in
+                            oAuthViewController.view.removeFromSuperview()
+                            oAuthViewController.removeFromParentViewController()
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
                     })
                 }
             }
@@ -50,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func presentOAuthViewController() {
+<<<<<<< HEAD
         guard let navigationController = self.window?.rootViewController as? UINavigationController else {
             fatalError("Check your root view controller...")
         }
@@ -59,6 +69,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Home VC?")
         }
         guard let storyboard = homeViewController.storyboard else { fatalError("Check for storyboard!") }
+=======
+        guard let homeViewController = self.window?.rootViewController as? HomeViewController else {
+            fatalError("Check your root view controller...")
+        }
+        
+        guard let storyboard = homeViewController.storyboard else { fatalError("Check for storyboard!") }
+        
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
         guard let oAuthViewController = storyboard.instantiateViewControllerWithIdentifier(OAuthViewController.id) as? OAuthViewController else {
             fatalError("Check scene identifier.")
         }
@@ -68,6 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         oAuthViewController.didMoveToParentViewController(homeViewController)
         
         self.oAuthViewController = oAuthViewController
+<<<<<<< HEAD
         self.homeViewController = homeViewController
     }
 }
@@ -92,3 +111,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
+=======
+    }
+}
+
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877

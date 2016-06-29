@@ -58,6 +58,7 @@ class API {
             }
         }.resume()
     }
+<<<<<<< HEAD
     
     func GETUser(completion: (user: User?) -> ()) {
         self.template.path = "/user"
@@ -110,4 +111,6 @@ class API {
 //    private func returnOnMain() {
 //    
 //    }    
+=======
+>>>>>>> 781010de0681a2a107aa14b154bc92b3f9d1b877
 }
