@@ -23,6 +23,7 @@ enum GitHubOAuthError: ErrorType {
 
 enum SaveOptions: Int {
     case userDefaults
+    case Keychain
 }
 
 class GitHubOAuth {
@@ -83,7 +84,30 @@ class GitHubOAuth {
         return NSUserDefaults.standardUserDefaults().synchronize()
     }
     
+    private func saveToKeychain(token: String) -> Bool {
+        var query = self.keychainQuery(kAccessTokenKey)
+        query[(kSecValueData as String)] = NSKeyedArchiver.archivedDataWithRootObject(token) // this returns raw binary data
+        SecItemDelete(query) // by default it's going to delete everything in the keychain for your app. Clear it out and add a new one.
+        
+        return SecItemAdd(query, nil) == errSecSuccess
+    }
+    
+    private func keychainQuery(query: String) -> [String: AnyObject] {
+        return [
+            (kSecClass as String) : kSecClassGenericPassword, // this encrypts the passwork
+            (kSecAttrService as String) : query, // the query can be cutsom -> github, facebook
+            (kSecAttrAccount as String) : query, // this is typically a username
+            (kSecAttrAccessible as String) : kSecAttrAccessibleAfterFirstUnlock // this says that the generic password can we accessed after first unlock
+        ]
+    }
+    
     func tokenRequestWithCallback(url: NSURL, options: SaveOptions, completion: GitHubOAuthCompletion) {
+        func returnOnMain(success: Bool, _ completion: GitHubOAuthCompletion) {
+            NSOperationQueue.mainQueue().addOperationWithBlock {
+                completion(success: success)
+            }
+        }
+        
         do {
             let temporaryCode = try self.temporaryCodeFromCallback(url)
             let requestString = "\(kOAuthBaseURLString)access_token?client_id=\(kGitHubClientID)&client_secret=\(kGitHubClientSecret)&code=\(temporaryCode)"
@@ -101,33 +125,48 @@ class GitHubOAuth {
                     
                     if let data = data {
                         if let tokenString = self.stringWithData(data) {
-                            print(data)
                             do {
-                                if let token = try self.accessTokenFromString(tokenString){
-                                    print("token: \(token)")
-                                    NSOperationQueue.mainQueue().addOperationWithBlock({ completion(success: self.saveAccessTokenToUser(token))
-                                        
-                                    })
-                                }
-                            } catch _ {
-                                NSOperationQueue.mainQueue().addOperationWithBlock({ completion(success: false)
-                                })
+                                let token = try self.accessTokenFromString(tokenString)!
+                                    
+                                    switch options {
+                                    case .userDefaults: returnOnMain(self.saveAccessTokenToUser(token), completion)
+                                    case .Keychain: returnOnMain(self.saveToKeychain(token), completion)
+                                    }
+                                
+                            } catch {
+                                returnOnMain(false, completion)
                             }
                         }
                     }
                 }).resume()
             }
         } catch _ {
-            NSOperationQueue.mainQueue().addOperationWithBlock({ completion(success: false) })
+            returnOnMain(false, completion)
         }
     }
     
     func accessToken() throws -> String? {
-        guard let accessToken = NSUserDefaults.standardUserDefaults().stringForKey(kAccessTokenKey) else {
-            throw GitHubOAuthError.MissingAccessToken("There is no Access Token saved.")
+        var query = self.keychainQuery(kAccessTokenKey)
+        query[(kSecReturnData as String)] = kCFBooleanTrue
+        query[(kSecMatchLimit as String)] = kSecMatchLimitOne
+        
+        var dataRef: AnyObject?
+        
+        if SecItemCopyMatching(query, &dataRef) == errSecSuccess {
+            if let data = dataRef as? NSData { // this is asking: Can this be unwrapped?
+                if let token = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? String {
+                    return token
+                }
+            }
+        } else {
+            guard let token = NSUserDefaults.standardUserDefaults().stringForKey(kAccessTokenKey) else {
+                throw GitHubOAuthError.MissingAccessToken("There is no Access Token saved.")
+            }
+            
+            return token
         }
         
-        return accessToken
+        return nil
     }
 }
 
